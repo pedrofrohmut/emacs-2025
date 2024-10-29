@@ -40,15 +40,15 @@
 (setq global-auto-revert-non-file-buffers t)
 (global-auto-revert-mode t)
 
-;; Mode to better auto complete on minibuffer
-(ido-mode t)
-
 ;; Show cursor position in statusbar
 (setq column-number-mode t)
 
 ;; Insert closing character like ) } ]
 (setq electric-pair-mode t)
 (electric-pair-mode)
+
+;; On file save
+(add-hook 'write-file-hooks 'delete-trailing-whitespace)
 
 ;; Apperance
 (load "~/.config/emacs/my/appearance.el")
@@ -61,3 +61,12 @@
 
 ;; Which-Key
 (load "~/.config/emacs/my/which-key.el")
+
+;; Minibuffer (Vertico / Marginalia / Orderless)
+(load "~/.config/emacs/my/mini-buffer.el")
+
+;; Consult
+(load "~/.config/emacs/my/consult.el")
+
+;; My Keybinds
+(load "~/.config/emacs/my/keybinds.el")
