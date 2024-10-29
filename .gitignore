@@ -1,3 +1,5 @@
 places
 elpa/
 projects
+emacs-custom.el
+.projectile

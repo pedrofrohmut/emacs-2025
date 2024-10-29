@@ -68,5 +68,8 @@
 ;; Consult
 (load "~/.config/emacs/my/consult.el")
 
+;; LSP
+(load "~/.config/emacs/my/lsp.el")
+
 ;; My Keybinds
 (load "~/.config/emacs/my/keybinds.el")
