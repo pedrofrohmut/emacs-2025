@@ -29,6 +29,10 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;; Set customize file
+(setq custom-file "~/.config/emacs/emacs-custom.el")
+(load custom-file :noerror)
+
 ;; Saves your location in files for the next time you open it
 (save-place-mode t)
 
@@ -42,6 +46,10 @@
 ;; Show cursor position in statusbar
 (setq column-number-mode t)
 
+;; Insert closing character like ) } ]
+(setq electric-pair-mode t)
+(electric-pair-mode)
+
 ;; Apperance
 (load "~/.config/emacs/my/appearance.el")
 
@@ -51,18 +59,5 @@
 ;; Emmet
 (load "~/.config/emacs/my/emmet.el")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("4ade6b630ba8cbab10703b27fd05bb43aaf8a3e5ba8c2dc1ea4a2de5f8d45882" "48042425e84cd92184837e01d0b4fe9f912d875c43021c3bcb7eeb51f1be5710" "f5f80dd6588e59cfc3ce2f11568ff8296717a938edd448a947f9823a4e282b66" "4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d" default))
- '(package-selected-packages
-   '(emmet-mode visual-fill-column doom-themes typescript-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; Which-Key
+(load "~/.config/emacs/my/which-key.el")
