@@ -71,5 +71,8 @@
 ;; LSP
 (load "~/.config/emacs/my/lsp.el")
 
+;; Auto Complete (Corfu and Abbrev)
+(load "~/.config/emacs/my/auto-complete.el")
+
 ;; My Keybinds
 (load "~/.config/emacs/my/keybinds.el")
