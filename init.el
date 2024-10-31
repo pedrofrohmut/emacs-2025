@@ -59,6 +59,9 @@
 ;; Emmet
 (load "~/.config/emacs/my/emmet.el")
 
+;; Expand Region
+(load "~/.config/emacs/my/expand-region.el")
+
 ;; Which-Key
 (load "~/.config/emacs/my/which-key.el")
 
