@@ -4,3 +4,4 @@ projects
 emacs-custom.el
 .projectile
 auto-save-list/
+url/

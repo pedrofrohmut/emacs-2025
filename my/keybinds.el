@@ -1,6 +1,13 @@
+;; Scrolling ####################################################################
+
 ;; Default scrolling was driving me crazy (but still available)
 (keymap-global-set "M-n" (lambda() (interactive) (scroll-up-command 25)))
 (keymap-global-set "M-p" (lambda() (interactive) (scroll-down-command 25)))
+
+(add-hook 'after-change-major-mode-hook
+          (lambda ()
+            (local-set-key (kbd "M-n") (lambda () (interactive) (scroll-up-command 25)))
+            (local-set-key (kbd "M-p") (lambda () (interactive) (scroll-down-command 25)))))
 
 (keymap-global-set "C-;" 'comment-or-uncomment-region)
 
