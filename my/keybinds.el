@@ -12,7 +12,7 @@
 ;;             (local-set-key (kbd "M-n") (lambda () (interactive) (scroll-up-command 25)))
 ;;             (local-set-key (kbd "M-p") (lambda () (interactive) (scroll-down-command 25)))))
 
-(keymap-global-set "C-;" 'comment-or-uncomment-region)
+;; (keymap-global-set "C-;" 'comment-or-uncomment-region)
 
 ;; Dired
 (require 'dired)

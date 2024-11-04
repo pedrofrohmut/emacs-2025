@@ -21,7 +21,7 @@
 (keymap-global-set "C-q" #'my/consult-fd-only-files)
 
 ;; Paste from register (from mini buffer)
-(keymap-global-set "C-M-p" 'consult-yank-from-kill-ring)
+(keymap-global-set "M-s y" 'consult-yank-from-kill-ring)
 
 (keymap-global-set "M-q" 'consult-project-buffer)
 
