@@ -21,3 +21,10 @@
 (keymap-set dired-mode-map "C-c n f" 'dired-create-empty-file)
 
 (keymap-global-set "M-s M-s" 'replace-string)
+
+;; Buffer recent
+(defun my/switch-to-recent-buffer ()
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(keymap-global-set "M-g b" #'my/switch-to-recent-buffer)

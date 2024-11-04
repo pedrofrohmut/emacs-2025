@@ -77,5 +77,8 @@
 ;; Auto Complete (Corfu and Abbrev)
 (load "~/.config/emacs/my/auto-complete.el")
 
+;; Languages Support
+(load "~/.config/emacs/my/languages-support.el")
+
 ;; My Keybinds
 (load "~/.config/emacs/my/keybinds.el")
