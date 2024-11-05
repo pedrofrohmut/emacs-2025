@@ -44,8 +44,10 @@
 (setq column-number-mode t)
 
 ;; Insert closing character like ) } ]
-(setq electric-pair-mode t)
 (electric-pair-mode)
+
+;; You can replace the active region just by typing text
+(delete-selection-mode t)
 
 ;; On file save
 (add-hook 'write-file-hooks 'delete-trailing-whitespace)
