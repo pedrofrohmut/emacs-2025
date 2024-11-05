@@ -3,16 +3,18 @@
 (keymap-global-set "C-v" (lambda() (interactive) (scroll-up-command 25)))
 (keymap-global-set "M-v" (lambda() (interactive) (scroll-down-command 25)))
 
-;; Default scrolling was driving me crazy (but still available)
-;; (keymap-global-set "M-n" (lambda() (interactive) (scroll-up-command 25)))
-;; (keymap-global-set "M-p" (lambda() (interactive) (scroll-down-command 25)))
+(defun my/scroll-half-page-down ()
+  "Scroll half a page down."
+  (interactive)
+  (scroll-up-command (/ (window-body-height) 2)))
 
-;; (add-hook 'after-change-major-mode-hook
-;;           (lambda ()
-;;             (local-set-key (kbd "M-n") (lambda () (interactive) (scroll-up-command 25)))
-;;             (local-set-key (kbd "M-p") (lambda () (interactive) (scroll-down-command 25)))))
+(defun my/scroll-half-page-up ()
+  "Scroll half a page up."
+  (interactive)
+  (scroll-down-command (/ (window-body-height) 2)))
 
-;; (keymap-global-set "C-;" 'comment-or-uncomment-region)
+(keymap-global-set "M-p" #'my/scroll-half-page-down)
+(keymap-global-set "M-n" #'my/scroll-half-page-up)
 
 ;; Dired
 (require 'dired)
@@ -20,7 +22,11 @@
 (keymap-set dired-mode-map "C-c n d" 'dired-create-directory)
 (keymap-set dired-mode-map "C-c n f" 'dired-create-empty-file)
 
+;; Utils
 (keymap-global-set "M-s M-s" 'replace-string)
+(keymap-global-set "C-M-y" 'duplicate-line)
+(keymap-global-set "C-<down>" 'join-line)
+(keymap-global-set "M-o" 'other-window)
 
 ;; Buffer recent
 (defun my/switch-to-recent-buffer ()
