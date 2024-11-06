@@ -79,6 +79,9 @@
 ;; Auto Complete (Corfu and Abbrev)
 (load "~/.config/emacs/my/auto-complete.el")
 
+;; Prescient
+(load "~/.config/emacs/my/prescient.el")
+
 ;; Languages Support
 (load "~/.config/emacs/my/languages-support.el")
 

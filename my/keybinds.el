@@ -1,7 +1,7 @@
 ;; Scrolling ####################################################################
 
-(keymap-global-set "C-v" (lambda() (interactive) (scroll-up-command 25)))
-(keymap-global-set "M-v" (lambda() (interactive) (scroll-down-command 25)))
+(keymap-global-set "C-v" (lambda() (interactive) (scroll-up-command 30)))
+(keymap-global-set "M-v" (lambda() (interactive) (scroll-down-command 30)))
 
 (defun my/scroll-half-page-down ()
   "Scroll half a page down."
@@ -13,8 +13,8 @@
   (interactive)
   (scroll-down-command (/ (window-body-height) 2)))
 
-(keymap-global-set "M-p" #'my/scroll-half-page-down)
-(keymap-global-set "M-n" #'my/scroll-half-page-up)
+(keymap-global-set "M-n" #'my/scroll-half-page-down)
+(keymap-global-set "M-p" #'my/scroll-half-page-up)
 
 ;; Dired
 (require 'dired)
