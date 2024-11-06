@@ -1,7 +1,7 @@
 ;; Appearance ###################################################################
 
 ;; Fonts
-(set-face-attribute 'default nil :font "FiraMono Nerd Font" :height 100)
+(set-face-attribute 'default nil :font "FiraMono Nerd Font" :height 104)
 
 ;; Theme and Colors #############################################################
 

@@ -67,6 +67,9 @@
 ;; Which-Key
 (load "~/.config/emacs/my/which-key.el")
 
+;; Github
+(load "~/.config/emacs/my/github.el")
+
 ;; Minibuffer (Vertico / Marginalia / Orderless)
 (load "~/.config/emacs/my/mini-buffer.el")
 
