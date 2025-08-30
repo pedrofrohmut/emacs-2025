@@ -14,7 +14,7 @@
 (set-background-color "#1a1b26")
 
 ;; Color for selected text
-(set-face-attribute 'region nil :foreground "#fff" :background "#552")
+;; (set-face-attribute 'region nil :foreground "#fff" :background "#552")
 
 ;; Comments (old value #727072)
 (defvar my-dark-gray-blue "#58a")
